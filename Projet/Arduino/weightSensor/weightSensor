@@ -1,0 +1,14 @@
+ #include "Hx711.h"
+
+Hx711 scale (A1,10);
+
+void setup () {
+Serial.begin(9600);
+scale.setScale(2280.f);
+
+}
+
+void loop (){
+Serial.println(scale.getValue());
+Serial.println(scale.getGram());
+}
